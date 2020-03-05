@@ -1,7 +1,11 @@
 import navbar from './header';
-import home from './home';
+import jumbotron from './home';
 import menu from './menu';
+import contact from './contact';
+import footer from './footer';
 
 navbar.display();
-home.display();
+jumbotron.display();
 menu.display();
+contact.display();
+footer.display();

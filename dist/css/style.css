@@ -33,3 +33,15 @@ header{
   padding: 10px;
   text-align: center;
 }
+.featurette {
+  margin: 0 30px;
+}
+.featurette-divider {
+  margin: 5rem 0;
+}
+
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+}

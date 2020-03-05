@@ -6,6 +6,7 @@ const jumbotron = (() => {
     content.appendChild(main);
 
     const section = document.createElement('section');
+    section.id = 'home'
     section.classList.add('jumbotron');
     section.classList.add('text-center');
 

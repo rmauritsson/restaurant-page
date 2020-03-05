@@ -3,6 +3,7 @@ const menu = (() => {
     const main = document.querySelector('main');
 
     const wrapper = document.createElement('div');
+    wrapper.id = 'menu'
     wrapper.classList.add('album');
     wrapper.classList.add('py-5');
     wrapper.classList.add('bg-light');
@@ -73,7 +74,7 @@ const menu = (() => {
 
     const cardThreeText = document.createElement('div');
     cardThreeText.classList.add('card-text');
-    cardThreeText.textContent = 'Our local menu has the famous luwombo, TV chicken, muchomo, Gnut sauce, katogo with meat stew, pilawo, pork and much more';
+    cardThreeText.textContent = 'Our local menu has the famous luwombo, kalo, TV chicken, muchomo, Gnut sauce, katogo with meat stew, pilawo, pork..... and much more';
 
 
     main.appendChild(wrapper);

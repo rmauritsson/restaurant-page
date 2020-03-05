@@ -50,8 +50,15 @@ const navbar = (() => {
     listThree.appendChild(listItemThree);
   };
 
+  const react = () => {
+    const home = display.listOne
+    home.addEventListener('click', ()=>{
+      alert('I am home')
+    });
+  };
   return {
     display,
+    react
   };
 })();
 
