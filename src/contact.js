@@ -1,26 +1,23 @@
+import defaultSet from './default';
+
 const contact = (() => {
   const display = () => {
-    const main = document.querySelector('main');
-
-    const divider = document.createElement('hr');
-    divider.classList.add('featurette-divider');
+    defaultSet.deleteChild();
+    const content = document.getElementById('mainContent');
 
     const row = document.createElement('div');
-    row.id = 'contact'
+    row.id = 'contact';
     row.classList.add('row');
     row.classList.add('featurette');
 
     const column = document.createElement('div');
-    column.classList.add('col-md-7');
+    column.classList.add('col-md-12');
     const columnTitle = document.createElement('h2');
     columnTitle.textContent = 'Contact Us';
     columnTitle.classList.add('featurette-heading');
     const columnPara = document.createElement('p');
     columnPara.classList.add('lead');
     columnPara.textContent = 'We are Open every day of the week from 8am - 10pm';
-
-    const columnTwo = document.createElement('div');
-    columnTwo.classList.add('col-md-5');
 
     const form = document.createElement('form');
     form.id = 'contact-us';
@@ -60,16 +57,16 @@ const contact = (() => {
     const submitButton = document.createElement('button');
     submitButton.classList.add('btn');
     submitButton.classList.add('btn-primary');
+    submitButton.type = 'submit';
     submitButton.textContent = 'Submit';
 
-    main.appendChild(divider);
-    main.appendChild(row);
+
+    content.appendChild(row);
     row.appendChild(column);
     column.appendChild(columnTitle);
     column.appendChild(columnPara);
 
-    row.appendChild(columnTwo);
-    columnTwo.appendChild(form);
+    column.appendChild(form);
     form.appendChild(formItemOne);
     formItemOne.appendChild(labelOne);
     formItemOne.appendChild(nameInput);
@@ -83,6 +80,10 @@ const contact = (() => {
     formItemThree.appendChild(messageInput);
 
     form.appendChild(submitButton);
+
+    document.querySelector('form').addEventListener('submit', () => {
+      alert('Form Submitted, Thank You');
+    });
   };
 
   return { display };

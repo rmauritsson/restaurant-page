@@ -1,9 +1,11 @@
+import defaultSet from './default';
+
 const menu = (() => {
   const display = () => {
-    const main = document.querySelector('main');
-
+    defaultSet.deleteChild();
+    const content = document.getElementById('mainContent');
     const wrapper = document.createElement('div');
-    wrapper.id = 'menu'
+    wrapper.id = 'menu';
     wrapper.classList.add('album');
     wrapper.classList.add('py-5');
     wrapper.classList.add('bg-light');
@@ -23,7 +25,7 @@ const menu = (() => {
     cardOne.classList.add('shadow-sm');
 
     const cardOneBackground = document.createElement('div');
-    cardOneBackground.id = 'card-one'
+    cardOneBackground.id = 'card-one';
     cardOneBackground.classList.add('card-body');
 
     const cardOneTitle = document.createElement('h2');
@@ -44,7 +46,7 @@ const menu = (() => {
     cardTwo.classList.add('shadow-sm');
 
     const cardTwoBackground = document.createElement('div');
-    cardTwoBackground.id = 'card-two'
+    cardTwoBackground.id = 'card-two';
     cardTwoBackground.classList.add('card-body');
 
     const cardTwoTitle = document.createElement('h2');
@@ -65,7 +67,7 @@ const menu = (() => {
     cardThree.classList.add('shadow-sm');
 
     const cardThreeBackground = document.createElement('div');
-    cardThreeBackground.id = 'card-three'
+    cardThreeBackground.id = 'card-three';
     cardThreeBackground.classList.add('card-body');
 
     const cardThreeTitle = document.createElement('h2');
@@ -77,7 +79,7 @@ const menu = (() => {
     cardThreeText.textContent = 'Our local menu has the famous luwombo, kalo, TV chicken, muchomo, Gnut sauce, katogo with meat stew, pilawo, pork..... and much more';
 
 
-    main.appendChild(wrapper);
+    content.appendChild(wrapper);
     wrapper.appendChild(container);
     container.appendChild(row);
     row.appendChild(columnOne);
