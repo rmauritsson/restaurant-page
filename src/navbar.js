@@ -1,8 +1,9 @@
+import defaultSet from './default';
+
 const navbar = (() => {
   const display = () => {
-    const content = document.getElementById('content');
-    const header = document.createElement('header');
-    content.appendChild(header);
+    
+    const content = document.querySelector('header');
 
     const nav = document.createElement('nav');
     nav.classList.add('navbar');
@@ -15,31 +16,37 @@ const navbar = (() => {
     logo.textContent = "Leo's Restaurant";
 
     const menu = document.createElement('ul');
-    menu.classList.add('navbar-nav')
-    menu.classList.add('ml-auto')
+    menu.classList.add('navbar-nav');
+    menu.classList.add('ml-auto');
     const listOne = document.createElement('li');
+    listOne.id = 'home';
     listOne.classList.add('nav-item');
 
     const listItemOne = document.createElement('a');
+    listItemOne.href = '#home';
     listItemOne.classList.add('nav-link');
     listItemOne.innerHTML = 'Home';
 
     const listTwo = document.createElement('li');
+    listTwo.id = 'menu';
     listTwo.classList.add('nav-item');
 
     const listItemTwo = document.createElement('a');
+    listItemTwo.href = '#menu';
     listItemTwo.classList.add('nav-link');
     listItemTwo.innerHTML = 'Menu';
 
     const listThree = document.createElement('li');
+    listThree.id = 'contact';
     listThree.classList.add('nav-item');
 
     const listItemThree = document.createElement('a');
+    listItemThree.href = '#contact';
     listItemThree.classList.add('nav-link');
     listItemThree.innerHTML = 'Contact';
 
 
-    header.appendChild(nav);
+    content.appendChild(nav);
     nav.appendChild(logo);
     nav.appendChild(menu);
     menu.appendChild(listOne);

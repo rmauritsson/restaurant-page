@@ -1,11 +1,15 @@
+import defaultSet from './default';
+
 const jumbotron = (() => {
   const display = () => {
-    const content = document.getElementById('content');
+    defaultSet.deleteChild();
+    const content = document.getElementById('mainContent');
     const main = document.createElement('main');
     main.classList.add('main');
     content.appendChild(main);
 
     const section = document.createElement('section');
+    section.id = 'home';
     section.classList.add('jumbotron');
     section.classList.add('text-center');
 
@@ -21,6 +25,7 @@ const jumbotron = (() => {
     para.textContent = 'We know what your taste buds want!';
 
     const button = document.createElement('button');
+    button.id = 'order-now';
     button.classList.add('btn');
     button.classList.add('btn-primary');
     button.textContent = 'Order Now';
