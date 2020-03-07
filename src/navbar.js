@@ -1,8 +1,5 @@
-import defaultSet from './default';
-
 const navbar = (() => {
   const display = () => {
-    
     const content = document.querySelector('header');
 
     const nav = document.createElement('nav');
